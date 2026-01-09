@@ -1,0 +1,31 @@
+{
+  "version": "1.0",
+  "description": "Django REST Framework skill triggers",
+  "skills": {
+    "backend-dev-guidelines": {
+      "type": "domain",
+      "enforcement": "suggest",
+      "priority": "high",
+      "promptTriggers": {
+        "keywords": ["backend", "django", "api", "view", "viewset", "model", "serializer", "endpoint", "drf", "rest framework", "urlconf"],
+        "intentPatterns": [
+          "(create|implement|build|add|update|fix).*?(api|endpoint|view|viewset|model|serializer)",
+          "(database|query|model|migration|orm)",
+          "(swagger|openapi|spectacular).*?(api|endpoint|documentation)"
+        ]
+      }
+    },
+    "route-tester": {
+      "type": "domain",
+      "enforcement": "suggest",
+      "priority": "medium",
+      "promptTriggers": {
+        "keywords": ["test route", "test api", "test endpoint", "auth test", "authentication test", "verify route", "debug auth"],
+        "intentPatterns": [
+          "(test|verify|check).*?(route|endpoint|api|authentication)",
+          "(debug|fix).*?(401|403|auth|login|permission)"
+        ]
+      }
+    }
+  }
+}
