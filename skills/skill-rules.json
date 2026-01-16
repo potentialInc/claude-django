@@ -6,7 +6,7 @@
       "type": "domain",
       "enforcement": "suggest",
       "priority": "high",
-      "file": "backend-dev-guidelines/skill.md",
+      "file": "development/backend-dev-guidelines.md",
       "promptTriggers": {
         "keywords": ["backend", "django", "api", "view", "viewset", "model", "serializer", "endpoint", "drf", "rest framework", "urlconf"],
         "intentPatterns": [
@@ -20,7 +20,7 @@
       "type": "domain",
       "enforcement": "suggest",
       "priority": "medium",
-      "file": "route-tester/skill.md",
+      "file": "api-testing/route-tester.md",
       "promptTriggers": {
         "keywords": ["test route", "test api", "test endpoint", "auth test", "authentication test", "verify route", "debug auth"],
         "intentPatterns": [
@@ -103,5 +103,15 @@
         ]
       }
     }
+  },
+  "guides": {
+    "_note": "Reference documents in ../guides/",
+    "architecture-overview": "../guides/architecture-overview.md",
+    "authentication": "../guides/authentication.md",
+    "complete-examples": "../guides/complete-examples.md",
+    "models-and-orm": "../guides/models-and-orm.md",
+    "serializers": "../guides/serializers.md",
+    "testing-guide": "../guides/testing-guide.md",
+    "views-and-urls": "../guides/views-and-urls.md"
   }
 }
