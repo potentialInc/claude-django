@@ -6,6 +6,7 @@
       "type": "domain",
       "enforcement": "suggest",
       "priority": "high",
+      "file": "development/backend-dev-guidelines.md",
       "promptTriggers": {
         "keywords": ["backend", "django", "api", "view", "viewset", "model", "serializer", "endpoint", "drf", "rest framework", "urlconf"],
         "intentPatterns": [
@@ -19,6 +20,7 @@
       "type": "domain",
       "enforcement": "suggest",
       "priority": "medium",
+      "file": "api-testing/route-tester.md",
       "promptTriggers": {
         "keywords": ["test route", "test api", "test endpoint", "auth test", "authentication test", "verify route", "debug auth"],
         "intentPatterns": [
@@ -26,6 +28,90 @@
           "(debug|fix).*?(401|403|auth|login|permission)"
         ]
       }
+    },
+    "code-quality": {
+      "type": "domain",
+      "enforcement": "suggest",
+      "priority": "medium",
+      "file": "code-quality/python-types.md",
+      "promptTriggers": {
+        "keywords": ["type hints", "pydantic", "mypy", "dataclass", "python types", "typing module"],
+        "intentPatterns": [
+          "(add|implement|fix).*?type.*?hints",
+          "(pydantic|dataclass).*?(model|validation)",
+          "mypy.*?(error|config|check)"
+        ]
+      },
+      "fileTriggers": {
+        "pathPatterns": [
+          "**/py.typed",
+          "**/mypy.ini"
+        ]
+      }
+    },
+    "debugging": {
+      "type": "domain",
+      "enforcement": "suggest",
+      "priority": "medium",
+      "file": "debugging/fix-bug.md",
+      "promptTriggers": {
+        "keywords": ["fix bug", "debug", "django error", "drf error", "python debug", "500 error", "400 error"],
+        "intentPatterns": [
+          "(fix|debug|solve|resolve).*?bug",
+          "(django|drf|python).*?error",
+          "troubleshoot.*?(issue|problem|error)"
+        ]
+      }
+    },
+    "pytest-fixtures": {
+      "type": "domain",
+      "enforcement": "suggest",
+      "priority": "medium",
+      "file": "e2e-testing/pytest-fixtures.md",
+      "promptTriggers": {
+        "keywords": ["pytest fixtures", "factory_boy", "conftest", "test fixtures", "test data", "test factory"],
+        "intentPatterns": [
+          "(create|add|write).*?(pytest|test).*?fixture",
+          "fixture.*?(pattern|setup|factory)",
+          "factory_boy.*?(model|setup)"
+        ]
+      },
+      "fileTriggers": {
+        "pathPatterns": [
+          "**/conftest.py",
+          "**/factories.py"
+        ]
+      }
+    },
+    "page-objects": {
+      "type": "domain",
+      "enforcement": "suggest",
+      "priority": "medium",
+      "file": "e2e-testing/page-objects.md",
+      "promptTriggers": {
+        "keywords": ["page objects", "selenium", "playwright python", "e2e page objects", "POM python"],
+        "intentPatterns": [
+          "(create|add|write).*?page.*object",
+          "page.*object.*?(pattern|setup)",
+          "(selenium|playwright).*?(page|test)"
+        ]
+      },
+      "fileTriggers": {
+        "pathPatterns": [
+          "**/tests/**/*.py",
+          "**/e2e/**/*.py"
+        ]
+      }
     }
+  },
+  "guides": {
+    "_note": "Reference documents in ../guides/",
+    "architecture-overview": "../guides/architecture-overview.md",
+    "authentication": "../guides/authentication.md",
+    "complete-examples": "../guides/complete-examples.md",
+    "models-and-orm": "../guides/models-and-orm.md",
+    "serializers": "../guides/serializers.md",
+    "testing-guide": "../guides/testing-guide.md",
+    "views-and-urls": "../guides/views-and-urls.md"
   }
 }
