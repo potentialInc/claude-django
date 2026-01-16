@@ -68,7 +68,7 @@ Database (Django ORM + PostgreSQL)
 
 **Key Principle:** Keep business logic in models/managers, keep views thin, use serializers for validation.
 
-See [architecture-overview.md](resources/architecture-overview.md) for complete details.
+See [architecture-overview.md](../../guides/architecture-overview.md) for complete details.
 
 ---
 
@@ -400,14 +400,14 @@ def recent(self, request):
 
 | Need to... | Read this |
 |------------|-----------|
-| Understand architecture | [architecture-overview.md](resources/architecture-overview.md) |
-| Create views | [views-and-urls.md](resources/views-and-urls.md) |
-| Work with serializers | [serializers.md](resources/serializers.md) |
-| Database operations | [models-and-orm.md](resources/models-and-orm.md) |
-| Validate input | [validation-patterns.md](resources/validation-patterns.md) |
-| Add authentication | [authentication.md](resources/authentication.md) |
-| Write tests | [testing-guide.md](resources/testing-guide.md) |
-| See examples | [complete-examples.md](resources/complete-examples.md) |
+| Understand architecture | [architecture-overview.md](../../guides/architecture-overview.md) |
+| Create views | [views-and-urls.md](../../guides/views-and-urls.md) |
+| Work with serializers | [serializers.md](../../guides/serializers.md) |
+| Database operations | [models-and-orm.md](../../guides/models-and-orm.md) |
+| Validate input | [validation-patterns.md](../../guides/validation-patterns.md) |
+| Add authentication | [authentication.md](../../guides/authentication.md) |
+| Write tests | [testing-guide.md](../../guides/testing-guide.md) |
+| See examples | [complete-examples.md](../../guides/complete-examples.md) |
 
 ---
 
