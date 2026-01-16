@@ -6,6 +6,7 @@
       "type": "domain",
       "enforcement": "suggest",
       "priority": "high",
+      "file": "backend-dev-guidelines/skill.md",
       "promptTriggers": {
         "keywords": ["backend", "django", "api", "view", "viewset", "model", "serializer", "endpoint", "drf", "rest framework", "urlconf"],
         "intentPatterns": [
@@ -19,6 +20,7 @@
       "type": "domain",
       "enforcement": "suggest",
       "priority": "medium",
+      "file": "route-tester/skill.md",
       "promptTriggers": {
         "keywords": ["test route", "test api", "test endpoint", "auth test", "authentication test", "verify route", "debug auth"],
         "intentPatterns": [
@@ -61,22 +63,43 @@
         ]
       }
     },
-    "e2e-testing": {
+    "pytest-fixtures": {
       "type": "domain",
       "enforcement": "suggest",
       "priority": "medium",
+      "file": "e2e-testing/pytest-fixtures.md",
       "promptTriggers": {
-        "keywords": ["pytest fixtures", "factory_boy", "e2e test", "selenium", "playwright python", "page objects"],
+        "keywords": ["pytest fixtures", "factory_boy", "conftest", "test fixtures", "test data", "test factory"],
         "intentPatterns": [
-          "(create|add|write).*?(pytest|e2e).*?(fixture|test)",
-          "(fixture|page.*object|factory).*?(pattern|setup)"
+          "(create|add|write).*?(pytest|test).*?fixture",
+          "fixture.*?(pattern|setup|factory)",
+          "factory_boy.*?(model|setup)"
+        ]
+      },
+      "fileTriggers": {
+        "pathPatterns": [
+          "**/conftest.py",
+          "**/factories.py"
+        ]
+      }
+    },
+    "page-objects": {
+      "type": "domain",
+      "enforcement": "suggest",
+      "priority": "medium",
+      "file": "e2e-testing/page-objects.md",
+      "promptTriggers": {
+        "keywords": ["page objects", "selenium", "playwright python", "e2e page objects", "POM python"],
+        "intentPatterns": [
+          "(create|add|write).*?page.*object",
+          "page.*object.*?(pattern|setup)",
+          "(selenium|playwright).*?(page|test)"
         ]
       },
       "fileTriggers": {
         "pathPatterns": [
           "**/tests/**/*.py",
-          "**/conftest.py",
-          "**/factories.py"
+          "**/e2e/**/*.py"
         ]
       }
     }
