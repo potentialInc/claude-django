@@ -26,6 +26,59 @@
           "(debug|fix).*?(401|403|auth|login|permission)"
         ]
       }
+    },
+    "code-quality": {
+      "type": "domain",
+      "enforcement": "suggest",
+      "priority": "medium",
+      "file": "code-quality/python-types.md",
+      "promptTriggers": {
+        "keywords": ["type hints", "pydantic", "mypy", "dataclass", "python types", "typing module"],
+        "intentPatterns": [
+          "(add|implement|fix).*?type.*?hints",
+          "(pydantic|dataclass).*?(model|validation)",
+          "mypy.*?(error|config|check)"
+        ]
+      },
+      "fileTriggers": {
+        "pathPatterns": [
+          "**/py.typed",
+          "**/mypy.ini"
+        ]
+      }
+    },
+    "debugging": {
+      "type": "domain",
+      "enforcement": "suggest",
+      "priority": "medium",
+      "file": "debugging/fix-bug.md",
+      "promptTriggers": {
+        "keywords": ["fix bug", "debug", "django error", "drf error", "python debug", "500 error", "400 error"],
+        "intentPatterns": [
+          "(fix|debug|solve|resolve).*?bug",
+          "(django|drf|python).*?error",
+          "troubleshoot.*?(issue|problem|error)"
+        ]
+      }
+    },
+    "e2e-testing": {
+      "type": "domain",
+      "enforcement": "suggest",
+      "priority": "medium",
+      "promptTriggers": {
+        "keywords": ["pytest fixtures", "factory_boy", "e2e test", "selenium", "playwright python", "page objects"],
+        "intentPatterns": [
+          "(create|add|write).*?(pytest|e2e).*?(fixture|test)",
+          "(fixture|page.*object|factory).*?(pattern|setup)"
+        ]
+      },
+      "fileTriggers": {
+        "pathPatterns": [
+          "**/tests/**/*.py",
+          "**/conftest.py",
+          "**/factories.py"
+        ]
+      }
     }
   }
 }
