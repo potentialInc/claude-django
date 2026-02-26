@@ -102,6 +102,31 @@
           "**/e2e/**/*.py"
         ]
       }
+    },
+    "rate-limiting": {
+      "type": "domain",
+      "enforcement": "suggest",
+      "priority": "high",
+      "file": "rate-limiting/rate-limiting.md",
+      "promptTriggers": {
+        "keywords": ["rate limit", "throttle", "throttling", "rate limiting", "brute force", "ddos", "request limit", "api abuse", "429"],
+        "intentPatterns": [
+          "(add|implement|configure|setup).*?(rate.?limit|throttl)",
+          "(protect|prevent).*?(brute.?force|abuse|ddos|spam)",
+          "(limit|restrict).*?(requests|api|endpoint)"
+        ]
+      },
+      "fileTriggers": {
+        "pathPatterns": [
+          "**/skills/throttling.py",
+          "**/throttle*.py"
+        ],
+        "contentPatterns": [
+          "SimpleRateThrottle",
+          "throttle_classes",
+          "DEFAULT_THROTTLE"
+        ]
+      }
     }
   },
   "guides": {
